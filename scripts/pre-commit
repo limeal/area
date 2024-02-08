@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cd web/ && pnpm format
+if [ $? -ne 0 ]; then
+  echo "Formatting failed"
+  exit 1
+fi

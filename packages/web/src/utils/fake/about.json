@@ -1,0 +1,101 @@
+{
+    "client": {
+        "host": "localhost:8080"
+    },
+    "server": {
+        "current_time": "2023-01-26T09:51:28.249606662Z",
+        "services": [
+            {
+                "name": "spotify",
+                "avatar_uri": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/800px-Spotify_logo_without_text.svg.png",
+                "authorization": "https://accounts.spotify.com/authorize?client_id=b6dc6e8e6ab840fcaea14337b91265fa&response_type=code&scope=user-read-private%20user-read-email%20playlist-read-private%20playlist-read-collaborative%20user-library-read%20user-top-read%20user-read-recently-played%20user-read-playback-state%20user-read-currently-playing",
+                "use_auth": false,
+                "rate_limit": 2,
+                "actions": [
+                    {
+                        "name": "new_saved_track",
+                        "description": "When a new track is saved",
+                        "store": {
+                            "playlist_id": {
+                                "required": true,
+                                "value": null
+                            }
+                        }
+                    },
+                    {
+                        "name": "playlist_changed",
+                        "description": "Triggered when a playlist is changed",
+                        "store": {
+                            "playlist_id": {
+                                "required": true,
+                                "value": null
+                            }
+                        }
+                    }
+                ],
+                "reactions": [
+                    {
+                        "name": "add_track_to_playlist",
+                        "description": "Add a track to a playlist",
+                        "store": {
+                            "playlist_id": {
+                                "required": true,
+                                "value": null
+                            },
+                            "position": {
+                                "required": false,
+                                "value": 0
+                            },
+                            "uris": {
+                                "required": true,
+                                "value": null
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "discord",
+                "avatar_uri": "https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png",
+                "authorization": "https://discordapp.com/api/oauth2/authorize?client_id=1065730841621319850&response_type=code&scope=identify%20email%20connections%20guilds%20guilds.join%20messages.read",
+                "use_auth": false,
+                "rate_limit": 2,
+                "actions": [],
+                "reactions": [
+                    {
+                        "name": "post_message",
+                        "description": "Post a message to a channel",
+                        "store": {
+                            "message": {
+                                "required": true,
+                                "value": null
+                            },
+                            "webhook_url": {
+                                "required": true,
+                                "value": null
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "reddit",
+                "avatar_uri": "https://www.iconpacks.net/icons/2/free-reddit-logo-icon-2436-thumb.png",
+                "authorization": "https://www.reddit.com/api/v1/authorize.compact?client_id=0_-CnG26vwTG2cslYK2gIQ&response_type=code&duration=permanent&scope=identity",
+                "use_auth": false,
+                "rate_limit": 0,
+                "actions": [],
+                "reactions": []
+            },
+            {
+                "name": "github",
+                "avatar_uri": "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+                "authorization": "https://github.com/login/oauth/authorize?client_id=a31ae322e40b2b795245&scope=user%20repo%20notifications%20gist",
+                "use_auth": true,
+                "rate_limit": 0,
+                "actions": [],
+                "reactions": []
+            }
+        ]
+    }
+}

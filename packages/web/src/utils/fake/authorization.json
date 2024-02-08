@@ -1,0 +1,11 @@
+{
+    "code": 200,
+    "data": {
+        "services": {
+            "spotify": false,
+            "discord": true,
+            "reddit": false,
+            "github": false
+        }
+    }
+}

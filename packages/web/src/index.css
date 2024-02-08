@@ -1,0 +1,27 @@
+@import '../node_modules/normalize.css/normalize.css';
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/RobotoCondensed-Bold.ttf'),
+        url('fonts/roboto/RobotoCondensed-BoldItalic.ttf'),
+        url('fonts/roboto/RobotoCondensed-Italic.ttf'),
+        url('fonts/roboto/RobotoCondensed-Light.ttf'),
+        url('fonts/roboto/RobotoCondensed-LightItalic.ttf'),
+        url('fonts/roboto/RobotoCondensed-Regular.ttf');
+}
+
+* {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
